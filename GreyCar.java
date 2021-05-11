@@ -8,12 +8,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GreyCar extends Actor
 {
+    private int speed;
     /**
-     * Act - do whatever the GreyCar wants to do. This method is called whenever
+     * Act - do whatever the Car wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
+        move(speed);
+        if(isAtEdge())
+        {
+            setLocation( 0, getY());
+        }
     }    
+    
+     /**
+     * Initialize the speed for the Car.
+     */
+    public GreyCar(int setSpeed)
+    {
+        speed = setSpeed;
+    }
 }
