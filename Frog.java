@@ -31,11 +31,11 @@ public class Frog extends Actor
         checkCollision();
     }    
     
-    public void keyJump()
+     public void keyJump()
     {
         //Check for the up key
         if( isUpPress == false && Greenfoot.isKeyDown("up") && getY() > 60)
-        {
+        
         setLocation( getX() , getY() - 60);
         isUpPress = true;
         if( isUpPress && !Greenfoot.isKeyDown("up"))
@@ -79,17 +79,25 @@ public class Frog extends Actor
             isLeftPress = false; 
         }
         
-        }
     }
     
     public void checkCollision()
     {
     {
-        if(isTouching(Car.class) || isTouching(GreyCar.class))
+        if(isTouching(Car.class) || isTouching(GreyCar.class)) 
         {
             setLocation(370, 510);
         }
         
+        if(isTouching(Ambulance.class))
+        {
+            setLocation(370, 510);
+        }
+        
+        if(isTouching(Bus.class))
+        {
+            setLocation(370,510);
+        }
     }
     }
 }
