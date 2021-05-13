@@ -91,12 +91,17 @@ public class Frog extends Actor
         
         if(isTouching(Ambulance.class))
         {
-            setLocation(370, 510);
+            setLocation(370, 270);
         }
         
         if(isTouching(Bus.class))
         {
-            setLocation(370,510);
+            setLocation(370,270);
+        }
+        
+        if(isTouching(Car2.class))
+        {
+            setLocation(370,270);
         }
     }
     }
