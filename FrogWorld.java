@@ -19,7 +19,7 @@ public class FrogWorld extends World
         super(800, 600, 1); 
         makeGround();
         addCars();
-        addGreyCars();
+        addMan();
         addAmbulances();
         addBuses();
         addCars2();
@@ -80,10 +80,10 @@ public class FrogWorld extends World
         
     }
     
-    public void addGreyCars()
+    public void addMan()
     {
-        //Little extra car that moves slower than others
-        addObject( new GreyCar(1), 34, 268);
+        //adding a man to walk on the sidewalks
+        addObject( new Man(2), 18, 270);
     }
     
     public void addAmbulances()
@@ -93,6 +93,7 @@ public class FrogWorld extends World
         
         //second row of Ambulances 
         addObject( new Ambulance(5), 318, 154);
+        addObject( new Ambulance(5), 504, 155);
     }
     
     public void addBuses()
@@ -108,8 +109,10 @@ public class FrogWorld extends World
     {
         //first set of Cars
         addObject( new Car2(5), 708, 213);
+        addObject( new Car2(5), 413 , 210);
         
         //second row of cars
         addObject( new Car2(8), 558, 87);
     }
+    
 }

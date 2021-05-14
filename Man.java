@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Person here.
+ * Write a description of class Man here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Person extends Actor
+public class Man extends Actor
 {
     private int speed;
     /**
@@ -25,7 +25,7 @@ public class Person extends Actor
      /**
      * Initialize the speed for the Car.
      */
-    public Person(int setSpeed)
+    public Man(int setSpeed)
     {
         speed = setSpeed;
     }
