@@ -86,7 +86,6 @@ public class Frog extends Actor
     
     public void checkCollision()
     {
-    {
         if(isTouching(Car.class) || isTouching(Man.class)) 
         {
             setLocation(370, 510);
@@ -100,17 +99,26 @@ public class Frog extends Actor
         if(isTouching(Bus.class))
         {
             setLocation(370,270);
+            lives = lives - 1;
+            if( lives == 0 )
+            {
+            Greenfoot.setWorld( new LoseScreen() );
+            }
+            setLocation(370,510);
         }
         
         if(isTouching(Car2.class))
         {
             setLocation(370,270);
+            lives = lives - 1;
+            if( lives == 0 )
+            {
+            Greenfoot.setWorld( new LoseScreen() );
+            }
+            setLocation(370,510);
         }
-        
-        lives = lives - 1;
-        if( lives == 0 )
-        {
-            
-        }
-
+       
+    }
+}
+    
     
