@@ -83,7 +83,7 @@ public class FrogWorld extends World
     public void addMan()
     {
         //adding a man to walk on the sidewalks
-        addObject( new Man(2), 18, 270);
+        addObject( new Man(1), 18, 270);
     }
     
     public void addAmbulances()

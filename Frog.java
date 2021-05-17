@@ -38,9 +38,10 @@ public class Frog extends Actor
     {
         //Check for the up key
         if( isUpPress == false && Greenfoot.isKeyDown("up") && getY() > 60)
-        
+        {
         setLocation( getX() , getY() - 60);
         isUpPress = true;
+        }
         if( isUpPress && !Greenfoot.isKeyDown("up"))
         {
             isUpPress = false;
@@ -86,17 +87,22 @@ public class Frog extends Actor
     
     public void checkCollision()
     {
-        if(isTouching(Car.class) || isTouching(Man.class)) 
+        if(isTouching(Man.class)) 
         {
             setLocation(370, 510);
         }
         
-        if(isTouching(Ambulance.class))
+        if(isTouching(Car.class) )
         {
-            setLocation(370, 270);
+            setLocation(370, 510);
+            lives = lives - 1;
+            if( lives == 0 )
+            {
+            Greenfoot.setWorld( new LoseScreen() );
+            }
         }
         
-        if(isTouching(Bus.class))
+        if(isTouching(Bus.class) || isTouching(Ambulance.class) || isTouching(Car2.class))
         {
             setLocation(370,270);
             lives = lives - 1;
@@ -104,20 +110,7 @@ public class Frog extends Actor
             {
             Greenfoot.setWorld( new LoseScreen() );
             }
-            setLocation(370,510);
         }
-        
-        if(isTouching(Car2.class))
-        {
-            setLocation(370,270);
-            lives = lives - 1;
-            if( lives == 0 )
-            {
-            Greenfoot.setWorld( new LoseScreen() );
-            }
-            setLocation(370,510);
-        }
-       
     }
 }
     
