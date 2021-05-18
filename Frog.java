@@ -41,7 +41,12 @@ public class Frog extends Actor
         {
         setLocation( getX() , getY() - 60);
         isUpPress = true;
+        if( getY() < 60 )
+        {
+            Greenfoot.setWorld( new WinScreen());
         }
+        }
+        
         if( isUpPress && !Greenfoot.isKeyDown("up"))
         {
             isUpPress = false;
