@@ -20,7 +20,7 @@ public class Frog extends Actor
         isDownPress = false;
         isRightPress = false;
         isLeftPress = false;
-        lives = 3;
+        lives = 4;
     }
     
     /**
