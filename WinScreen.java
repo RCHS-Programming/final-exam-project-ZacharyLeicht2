@@ -19,6 +19,8 @@ public class WinScreen extends World
         super(800, 600, 1);  
         showText( "CONGRATS, YOU WIN!!!", 393, 264); 
         showText( "Click Emoji to Reset the Game! -->", 393, 300);
+        showText( "Click Here to go Back to Start Screen! -->", 555, 572);
         addObject( new ResetButton(), 609, 300);
+        addObject( new BackButton(), 764, 572);
     }
 }

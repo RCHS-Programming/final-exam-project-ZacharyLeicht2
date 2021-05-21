@@ -19,6 +19,8 @@ public class LoseScreen extends World
         super(800, 600, 1); 
         showText( "SORRY, YOU LOSE!", 400, 264);
         showText( "Click Emoji to Reset the Game! -->", 393, 300);
+        showText( "Click Here to go Back to Start Screen! -->", 555, 572);
         addObject( new ResetButton2(), 609, 300); 
+        addObject( new BackButton(), 764, 572);
     }
 }
