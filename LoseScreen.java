@@ -15,7 +15,7 @@ public class LoseScreen extends World
      */
     public LoseScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 800x600 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
         showText( "SORRY, YOU LOSE!", 400, 264);
         showText( "Click Emoji to Reset the Game! -->", 393, 300);
